@@ -189,23 +189,30 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ringtones/Vespa.ogg:system/media/audio/ringtones/Vespa.ogg \
     $(LOCAL_PATH)/newwavelabs/World.ogg:system/media/audio/ringtones/World.ogg \
     $(LOCAL_PATH)/ringtones/ogg/Zeta.ogg:system/media/audio/ringtones/Zeta.ogg \
-    $(LOCAL_PATH)/effects/ogg/Dock.ogg:system/media/audio/ui/Dock.ogg \
-    $(LOCAL_PATH)/effects/ogg/Effect_Tick_48k.ogg:system/media/audio/ui/Effect_Tick.ogg \
-    $(LOCAL_PATH)/effects/ogg/KeypressDelete_120_48k.ogg:system/media/audio/ui/KeypressDelete.ogg \
-    $(LOCAL_PATH)/effects/ogg/KeypressReturn_120_48k.ogg:system/media/audio/ui/KeypressReturn.ogg \
-    $(LOCAL_PATH)/effects/ogg/KeypressSpacebar_120_48k.ogg:system/media/audio/ui/KeypressSpacebar.ogg \
-    $(LOCAL_PATH)/effects/ogg/KeypressStandard_120_48k.ogg:system/media/audio/ui/KeypressStandard.ogg \
-    $(LOCAL_PATH)/effects/ogg/KeypressInvalid_120_48k.ogg:system/media/audio/ui/KeypressInvalid.ogg \
-    $(LOCAL_PATH)/effects/ogg/Lock.ogg:system/media/audio/ui/Lock.ogg \
-    $(LOCAL_PATH)/effects/ogg/LowBattery.ogg:system/media/audio/ui/LowBattery.ogg \
-    $(LOCAL_PATH)/effects/ogg/Undock.ogg:system/media/audio/ui/Undock.ogg \
-    $(LOCAL_PATH)/effects/ogg/Unlock.ogg:system/media/audio/ui/Unlock.ogg \
-    $(LOCAL_PATH)/effects/ogg/Trusted_48k.ogg:system/media/audio/ui/Trusted.ogg \
-    $(LOCAL_PATH)/effects/ogg/VideoRecord_48k.ogg:system/media/audio/ui/VideoRecord.ogg \
-    $(LOCAL_PATH)/effects/ogg/VideoStop_48k.ogg:system/media/audio/ui/VideoStop.ogg \
-    $(LOCAL_PATH)/effects/ogg/WirelessChargingStarted.ogg:system/media/audio/ui/WirelessChargingStarted.ogg \
-    $(LOCAL_PATH)/effects/ogg/camera_click_48k.ogg:system/media/audio/ui/camera_click.ogg \
-    $(LOCAL_PATH)/effects/ogg/camera_focus.ogg:system/media/audio/ui/camera_focus.ogg \
+    $(LOCAL_PATH)/effects/pixel/Dock.ogg:system/media/audio/ui/Dock.ogg \
+    $(LOCAL_PATH)/effects/pixel/Effect_Tick.ogg:system/media/audio/ui/Effect_Tick.ogg \
+    $(LOCAL_PATH)/effects/pixel/KeypressDelete.ogg:system/media/audio/ui/KeypressDelete.ogg \
+    $(LOCAL_PATH)/effects/pixel/KeypressReturn.ogg:system/media/audio/ui/KeypressReturn.ogg \
+    $(LOCAL_PATH)/effects/pixel/KeypressSpacebar.ogg:system/media/audio/ui/KeypressSpacebar.ogg \
+    $(LOCAL_PATH)/effects/pixel/KeypressStandard.ogg:system/media/audio/ui/KeypressStandard.ogg \
+    $(LOCAL_PATH)/effects/pixel/KeypressInvalid.ogg:system/media/audio/ui/KeypressInvalid.ogg \
+    $(LOCAL_PATH)/effects/pixel/Lock.ogg:system/media/audio/ui/Lock.ogg \
+    $(LOCAL_PATH)/effects/pixel/LowBattery.ogg:system/media/audio/ui/LowBattery.ogg \
+    $(LOCAL_PATH)/effects/pixel/Undock.ogg:system/media/audio/ui/Undock.ogg \
+    $(LOCAL_PATH)/effects/pixel/Unlock.ogg:system/media/audio/ui/Unlock.ogg \
+    $(LOCAL_PATH)/effects/pixel/Trusted.ogg:system/media/audio/ui/Trusted.ogg \
+    $(LOCAL_PATH)/effects/pixel/VideoRecord.ogg:system/media/audio/ui/VideoRecord.ogg \
+    $(LOCAL_PATH)/effects/pixel/VideoStop.ogg:system/media/audio/ui/VideoStop.ogg \
+    $(LOCAL_PATH)/effects/pixel/WirelessChargingStarted.ogg:system/media/audio/ui/WirelessChargingStarted.ogg \
+    $(LOCAL_PATH)/effects/pixel/camera_click.ogg:system/media/audio/ui/camera_click.ogg \
+    $(LOCAL_PATH)/effects/pixel/camera_focus.ogg:system/media/audio/ui/camera_focus.ogg \
+    $(LOCAL_PATH)/effects/pixel/audio_end.ogg:system/media/audio/ui/audio_end.ogg \
+    $(LOCAL_PATH)/effects/pixel/audio_initiate.ogg:system/media/audio/ui/audio_initiate.ogg \
+    $(LOCAL_PATH)/effects/pixel/NFCFailure.ogg:system/media/audio/ui/NFCFailure.ogg \
+    $(LOCAL_PATH)/effects/pixel/NFCInitiated.ogg:system/media/audio/ui/NFCInitiated.ogg \
+    $(LOCAL_PATH)/effects/pixel/NFCSuccess.ogg:system/media/audio/ui/NFCSuccess.ogg \
+    $(LOCAL_PATH)/effects/pixel/NFCTransferComplete.ogg:system/media/audio/ui/NFCTransferComplete.ogg \
+    $(LOCAL_PATH)/effects/pixel/NFCTransferInitiated.ogg:system/media/audio/ui/NFCTransferInitiated.ogg \
     $(LOCAL_PATH)/ringtones/material/ogg/Callisto.ogg:system/media/audio/ringtones/Callisto.ogg \
     $(LOCAL_PATH)/ringtones/material/ogg/Dione.ogg:system/media/audio/ringtones/Dione.ogg \
     $(LOCAL_PATH)/ringtones/material/ogg/Ganymede.ogg:system/media/audio/ringtones/Ganymede.ogg \
@@ -227,4 +234,32 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/notifications/material/ogg/Rhea.ogg:system/media/audio/notifications/Rhea.ogg \
     $(LOCAL_PATH)/notifications/material/ogg/Salacia.ogg:system/media/audio/notifications/Salacia.ogg \
     $(LOCAL_PATH)/notifications/material/ogg/Tethys.ogg:system/media/audio/notifications/Tethys.ogg \
-    $(LOCAL_PATH)/notifications/material/ogg/Titan.ogg:system/media/audio/notifications/Titan.ogg
+    $(LOCAL_PATH)/notifications/material/ogg/Titan.ogg:system/media/audio/notifications/Titan.ogg \
+    $(LOCAL_PATH)/alarms/pixel/Awaken.ogg:system/media/audio/alarms/Awaken.ogg \
+    $(LOCAL_PATH)/alarms/pixel/Bounce.ogg:system/media/audio/alarms/Bounce.ogg \
+    $(LOCAL_PATH)/alarms/pixel/Drip.ogg:system/media/audio/alarms/Drip.ogg \
+    $(LOCAL_PATH)/alarms/pixel/Flow.ogg:system/media/audio/alarms/Flow.ogg \
+    $(LOCAL_PATH)/alarms/pixel/Gallop.ogg:system/media/audio/alarms/Gallop.ogg \
+    $(LOCAL_PATH)/alarms/pixel/Nudge.ogg:system/media/audio/alarms/Nudge.ogg \
+    $(LOCAL_PATH)/alarms/pixel/Orbit.ogg:system/media/audio/alarms/Orbit.ogg \
+    $(LOCAL_PATH)/alarms/pixel/Rise.ogg:system/media/audio/alarms/Rise.ogg \
+    $(LOCAL_PATH)/alarms/pixel/Sway.ogg:system/media/audio/alarms/Sway.ogg \
+    $(LOCAL_PATH)/alarms/pixel/Wag.ogg:system/media/audio/alarms/Wag.ogg \
+    $(LOCAL_PATH)/notifications/pixel/Birdsong.ogg:system/media/audio/notifications/Birdsong.ogg \
+    $(LOCAL_PATH)/notifications/pixel/Chime.ogg:system/media/audio/notifications/Chime.ogg \
+    $(LOCAL_PATH)/notifications/pixel/Clink.ogg:system/media/audio/notifications/Clink.ogg \
+    $(LOCAL_PATH)/notifications/pixel/Flick.ogg:system/media/audio/notifications/Flick.ogg \
+    $(LOCAL_PATH)/notifications/pixel/Hey.ogg:system/media/audio/notifications/Hey.ogg \
+    $(LOCAL_PATH)/notifications/pixel/Note.ogg:system/media/audio/notifications/Note.ogg \
+    $(LOCAL_PATH)/notifications/pixel/Strum.ogg:system/media/audio/notifications/Strum.ogg \
+    $(LOCAL_PATH)/notifications/pixel/Trill.ogg:system/media/audio/notifications/Trill.ogg \
+    $(LOCAL_PATH)/ringtones/pixel/Beats.ogg:system/media/audio/ringtones/Beats.ogg \
+    $(LOCAL_PATH)/ringtones/pixel/Dance_party.ogg:system/media/audio/ringtones/Dance_party.ogg \
+    $(LOCAL_PATH)/ringtones/pixel/Early_bird.ogg:system/media/audio/ringtones/Early_bird.ogg \
+    $(LOCAL_PATH)/ringtones/pixel/Hey_hey.ogg:system/media/audio/ringtones/Hey_hey.ogg \
+    $(LOCAL_PATH)/ringtones/pixel/Romance.ogg:system/media/audio/ringtones/Romance.ogg \
+    $(LOCAL_PATH)/ringtones/pixel/Rrrring.ogg:system/media/audio/ringtones/Rrrring.ogg \
+    $(LOCAL_PATH)/ringtones/pixel/Shooting_star.ogg:system/media/audio/ringtones/Shooting_star.ogg \
+    $(LOCAL_PATH)/ringtones/pixel/Spaceship.ogg:system/media/audio/ringtones/Spaceship.ogg \
+    $(LOCAL_PATH)/ringtones/pixel/Summer_night.ogg:system/media/audio/ringtones/Summer_night.ogg \
+    $(LOCAL_PATH)/ringtones/pixel/Zen.ogg:system/media/audio/ringtones/Zen.ogg
