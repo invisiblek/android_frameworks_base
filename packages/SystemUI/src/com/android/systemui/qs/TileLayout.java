@@ -12,6 +12,8 @@ import com.android.systemui.qs.QSPanel.TileRecord;
 
 import java.util.ArrayList;
 
+import android.os.SystemProperties;
+
 public class TileLayout extends ViewGroup implements QSTileLayout {
 
     private static final float TILE_ASPECT = 1.2f;
@@ -74,7 +76,7 @@ public class TileLayout extends ViewGroup implements QSTileLayout {
 
     public boolean updateResources() {
         final Resources res = mContext.getResources();
-        final int columns = Math.max(1, res.getInteger(R.integer.quick_settings_num_columns));
+        final int columns = SystemProperties.getInt("persist.qs_columns", Math.max(1, res.getInteger(R.integer.quick_settings_num_columns)));
         mCellHeight = mContext.getResources().getDimensionPixelSize(R.dimen.qs_tile_height);
         mCellMargin = res.getDimensionPixelSize(R.dimen.qs_tile_margin);
         mCellMarginTop = res.getDimensionPixelSize(R.dimen.qs_tile_margin_top);
