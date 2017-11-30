@@ -74,20 +74,25 @@ public class FingerprintUtils {
         getStateForUser(ctx, userId).renameFingerprint(fingerId, name);
     }
 
+    private static boolean doFpHaptic(Context context, boolean success) {
+        boolean mVibrateOnFp = CMSettings.Secure.getInt(context.getContentResolver(),
+                CMSettings.Secure.VIBRATE_ON_FP, 1) == 1;
+        boolean mVibrateOnFpOnlySuccess = CMSettings.Secure.getInt(context.getContentResolver(),
+                CMSettings.Secure.VIBRATE_ON_FP_ONLYSUCCESS, 0) == 1;
+
+        return mVibrateOnFp && (success || !mVibrateOnFpOnlySuccess);
+    }
+
     public static void vibrateFingerprintError(Context context) {
-        final boolean doFpHaptic = CMSettings.Secure.getInt(context.getContentResolver(),
-                CMSettings.Secure.VIBRATE_ON_FP, 1) != 0;
         Vibrator vibrator = context.getSystemService(Vibrator.class);
-        if (doFpHaptic && vibrator != null) {
+        if (doFpHaptic(context, false) && vibrator != null) {
             vibrator.vibrate(FP_ERROR_VIBRATE_PATTERN, -1);
         }
     }
 
     public static void vibrateFingerprintSuccess(Context context) {
-        final boolean doFpHaptic = CMSettings.Secure.getInt(context.getContentResolver(),
-                CMSettings.Secure.VIBRATE_ON_FP, 1) != 0;
         Vibrator vibrator = context.getSystemService(Vibrator.class);
-        if (doFpHaptic && vibrator != null) {
+        if (doFpHaptic(context, true) && vibrator != null) {
             vibrator.vibrate(FP_SUCCESS_VIBRATE_PATTERN, -1);
         }
     }
