@@ -326,6 +326,8 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
             "cmsecure:" + CMSettings.Secure.LOCKSCREEN_MEDIA_METADATA;
     private static final String SYSTEMUI_BURNIN_PROTECTION =
             "cmsystem:" + CMSettings.System.SYSTEMUI_BURNIN_PROTECTION;
+    private static final String SYSTEMUI_BATTERYMODE_COLOR =
+            "cmsystem:" + CMSettings.System.SYSTEMUI_BATTERYMODE_COLOR;
 
     static {
         boolean onlyCoreApps;
@@ -623,6 +625,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
     private boolean mKeyguardShowingMedia;
     private boolean mShowMediaMetadata;
     private boolean mBurnInProtectionEnabled;
+    private boolean mDisableBatteryModeColor;
 
     private MediaSessionManager mMediaSessionManager;
     private MediaController mMediaController;
@@ -828,7 +831,8 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                 NAVBAR_LEFT_IN_LANDSCAPE,
                 STATUS_BAR_BRIGHTNESS_CONTROL,
                 LOCKSCREEN_MEDIA_METADATA,
-                SYSTEMUI_BURNIN_PROTECTION);
+                SYSTEMUI_BURNIN_PROTECTION,
+                SYSTEMUI_BATTERYMODE_COLOR);
 
         // Lastly, call to the icon policy to install/update all the icons.
         mIconPolicy = new PhoneStatusBarPolicy(mContext, mIconController, mCastController,
@@ -3457,7 +3461,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         final boolean powerSave = mBatteryController.isPowerSave();
         final boolean anim = !noAnimation && mDeviceInteractive
                 && windowState != WINDOW_STATE_HIDDEN && !powerSave;
-        if (powerSave && getBarState() == StatusBarState.SHADE) {
+        if (powerSave && getBarState() == StatusBarState.SHADE && !mDisableBatteryModeColor) {
             mode = MODE_WARNING;
         }
         transitions.transitionTo(mode, anim);
@@ -5601,6 +5605,9 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                         mBurnInProtectionController.stopShiftTimer(true);
                     }
                 }
+                break;
+            case SYSTEMUI_BATTERYMODE_COLOR:
+                mDisableBatteryModeColor = newValue != null && Integer.parseInt(newValue) == 0;
                 break;
             default:
                 break;
