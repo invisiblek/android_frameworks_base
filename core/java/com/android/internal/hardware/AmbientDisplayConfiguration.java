@@ -82,7 +82,8 @@ public class AmbientDisplayConfiguration {
     }
 
     public boolean doubleTapSensorAvailable() {
-        return !TextUtils.isEmpty(doubleTapSensorType());
+        return !TextUtils.isEmpty(doubleTapSensorType())
+                || mContext.getResources().getBoolean(com.android.internal.R.bool.config_supportDoubleTapWake);
     }
 
     public String doubleTapSensorType() {
