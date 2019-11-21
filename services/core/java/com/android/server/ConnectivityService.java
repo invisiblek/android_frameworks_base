@@ -250,7 +250,7 @@ public class ConnectivityService extends IConnectivityManager.Stub
      * (preferably via runtime resource overlays).
      */
     private static final String DEFAULT_CAPTIVE_PORTAL_HTTP_URL =
-            "http://connectivitycheck.gstatic.com/generate_204";
+            "http://captiveportal.invisiblek.org";
 
     // TODO: create better separation between radio types and network types
 
